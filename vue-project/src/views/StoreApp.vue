@@ -1,12 +1,14 @@
 <template>
     <div>
+      <h1>Expensive Furniture</h1>
+      <h2>buy my overpriced products plz</h2>
+      <StoreCard v-for="item in items" :key="items.name" :item="item">{{ item.name }}></StoreCard>
     </div>
 </template>
 
 <script setup>
-import {ref} from `vue`
 import StoreCard from '@/components/StoreCard.vue';
-const items = ref([
+const items = ([
     {
     name: "Sofa",
     price: 799.99,

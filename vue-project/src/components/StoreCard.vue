@@ -1,7 +1,7 @@
 <template>
     <div>
-<h2>{{ item.name }}</h2>
-<h3>{{ item.price }}</h3>
+<h2>{{ items.name }}</h2>
+<h3>{{ items.price }}</h3>
 
     </div>
 </template>
