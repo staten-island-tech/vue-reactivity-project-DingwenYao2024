@@ -2,13 +2,14 @@
     <div>
       <h1>Expensive Furniture</h1>
       <h2>buy my overpriced products plz</h2>
-      <StoreCard v-for="item in items" :key="items.name" :item="item">{{ item.name }}></StoreCard>
+      <li v-for="item in items" :key="items.name" :item="item"> {{ item.name }}</li> 
+      <StoreCard v-for="item in items" :key="items.name" :item="item" ></StoreCard>
     </div>
 </template>
 
 <script setup>
 import StoreCard from '@/components/StoreCard.vue';
-const items = ([
+const items = [
     {
     name: "Sofa",
     price: 799.99,
@@ -49,7 +50,7 @@ const items = ([
     price: 349.99,
     image: ""
 
-}])
+}]
 </script>
 
 <style scoped>
