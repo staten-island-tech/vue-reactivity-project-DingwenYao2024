@@ -11,42 +11,42 @@ import StoreCard from '@/components/StoreCard.vue';
 const items = [
     {
     name: "Sofa",
-    price: 799.99,
+    price: 508083.99,
     image: ""
   },
   {
     name: "Dining Table",
-    price: 499.99,
+    price: 431824.99,
     image: ""
   },
   {
     name: "Office Chair",
-    price: 149.99,
+    price: 853795.99,
     image: ""
   },
   {
     name: "Queen Bed Frame",
-    price: 399.99,
+    price: 96124.99,
     image: ""
   },
   {
     name: "Bookshelf",
-    price: 129.99,
+    price: 8622.99,
     image: ""
   },
   {
     name: "Coffee Table",
-    price: 89.99,
+    price: 117079.99,
     image: ""
   },
   {
     name: "Wardrobe",
-    price: 599.99,
+    price: 230143.99,
     image: ""
   },
   {
     name: "Recliner",
-    price: 349.99,
+    price: 467500.99,
     image: ""
 
 }]
