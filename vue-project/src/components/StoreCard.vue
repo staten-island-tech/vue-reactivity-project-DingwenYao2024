@@ -2,7 +2,7 @@
     <div>
 <img :src="item.image" alt=""></img>
 <h2>{{ item.name }}</h2>
-<h3>{{ item.price }}</h3>
+<h3>${{ item.price }}</h3>
 <button>Scam yourself</button>
     </div>
 </template>
@@ -19,6 +19,7 @@ defineProps({
 <style scoped>
 div{
     display: flex;
+    height: fit-content;
     flex-direction: column;
     align-items: center;
     width: 300px;

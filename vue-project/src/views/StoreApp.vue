@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="container">
       <h1>Expensive Furniture</h1>
       <h2>buy my overpriced products plz</h2> 
-      <StoreCard v-for="item in items" :key="items.name" :item="item"></StoreCard>
+      <StoreCard v-for="item in items" :key="item.name" :item="item"></StoreCard>
     </div>
 </template>
 
@@ -53,16 +53,16 @@ const items = [
 </script>
 
 <style scoped>
-div {
+.container {
   padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-h1 {
+h1, h2 {
+  width: 100%;
   text-align: center;
-  margin-bottom: 20px;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
 }
 </style>
