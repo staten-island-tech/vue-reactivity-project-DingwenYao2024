@@ -3,7 +3,7 @@
 <img :src="item.image" alt=""></img>
 <h2>{{ item.name }}</h2>
 <h3>${{ item.price }}</h3>
-<button>Scam yourself</button>
+<button>Plz Buy</button>
     </div>
 </template>
 
