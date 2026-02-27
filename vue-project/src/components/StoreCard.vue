@@ -26,4 +26,9 @@ div{
     border: 5px solid black;
     margin-bottom: 20px;  
 }
+
+button{
+    margin-bottom: 40px;
+    
+}
 </style>

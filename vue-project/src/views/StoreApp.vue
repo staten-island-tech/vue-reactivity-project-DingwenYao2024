@@ -30,6 +30,11 @@ const items = [
     image: ""
   },
   {
+    name: "King Bed Frame",
+    price: 85025323.99,
+    image:""
+  },
+  {
     name: "Bookshelf",
     price: 8622.99,
     image: ""
