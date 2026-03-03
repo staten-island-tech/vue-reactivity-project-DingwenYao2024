@@ -1,6 +1,6 @@
 <template>
     <div>
-<img :src="item.image" alt=""></img>
+<img :src="item.image" alt=""/>
 <h2>{{ item.name }}</h2>
 <h3>${{ item.price }}</h3>
 <button>Plz Buy</button>
@@ -11,7 +11,7 @@
 defineProps({
     item:{
         type: Object,
-        requires: true
+        required: true
     }
 })
 </script>
@@ -29,6 +29,10 @@ div{
 
 button{
     margin-bottom: 40px;
-    
+}
+
+img{
+    width:300px;
+    height: 300px;
 }
 </style>
