@@ -67,7 +67,13 @@ const items = ref([
   justify-content: center;
 }
 
-h1, h2 {
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+}
+
+h2{
   width: 100%;
   text-align: center;
 }
