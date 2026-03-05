@@ -3,7 +3,7 @@
 <img :src="item.image" alt=""/>
 <h2>{{ item.name }}</h2>
 <h3>${{ item.price }}</h3>
-<button>Plz Buy</button>
+<button @click="addToCart">Plz Buy</button>
     </div>
 </template>
 
@@ -14,6 +14,11 @@ defineProps({
         required: true
     }
 })
+
+function addToCart(item){
+    console.log (item.name)
+}
+
 </script>
 
 <style scoped>

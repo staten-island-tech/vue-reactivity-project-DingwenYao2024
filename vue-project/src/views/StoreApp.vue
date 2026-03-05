@@ -1,9 +1,10 @@
 <template>
-    <div class="container">
-      <h1>Expensive Furniture</h1>
-      <h2>buy my overpriced products plz</h2> 
-      <StoreCard v-for="item in items" :key="item.name" :item="item"></StoreCard>
-    </div>
+
+  <div class="container">
+    <h1>Expensive Furniture</h1>
+    <h2>buy my overpriced products plz</h2> 
+    <StoreCard v-for="item in items" :key="item.name" :item="item"></StoreCard>
+  </div>
 </template>
 
 <script setup>
@@ -56,6 +57,8 @@ const items = ref([
     image: "https://i5.walmartimages.com/asr/1c851bb2-4a98-4755-a399-ed9326577c02.e1dd91cef583e3f2699adb89fe021440.jpeg",
 
 }])
+
+const cart = ref([])
 </script>
 
 <style scoped>
