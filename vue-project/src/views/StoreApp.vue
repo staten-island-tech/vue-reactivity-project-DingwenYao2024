@@ -1,17 +1,34 @@
 <template>
-
   <div class="container">
     <h1>Expensive Furniture</h1>
     <h2>buy my overpriced products plz</h2> 
-    <StoreCard v-for="item in items" :key="item.name" :item="item"></StoreCard>
+
+    <!-- PRODUCTS -->
+    <StoreCard
+      v-for="item in items"
+      :key="item.name"
+      :item="item"
+      @add-to-cart="addToCart"
+    />
+
+    <div class="cart">
+      <h2>Cart</h2>
+
+      <div v-for="(item, index) in cart" :key="index">
+        {{ item.name }} - ${{ item.price }}
+      </div>
+
+      <h3>Total: ${{ total }}</h3>
+    </div>
   </div>
 </template>
 
 <script setup>
-import StoreCard from '@/components/StoreCard.vue';
-import {ref} from 'vue'
+import StoreCard from '@/components/StoreCard.vue'
+import { ref, computed } from 'vue'
+
 const items = ref([
-    {
+  {
     name: "Sofa",
     price: 508083.99,
     image: "https://m.media-amazon.com/images/I/81mWxd0a8ZL._AC_.jpg",
@@ -55,29 +72,16 @@ const items = ref([
     name: "Recliner",
     price: 467500.99,
     image: "https://i5.walmartimages.com/asr/1c851bb2-4a98-4755-a399-ed9326577c02.e1dd91cef583e3f2699adb89fe021440.jpeg",
-
-}])
+  }
+])
 
 const cart = ref([])
+
+function addToCart(item) {
+  cart.value.push(item)
+}
+
+const total = computed(() => {
+  return cart.value.reduce((sum, item) => sum + item.price, 0)
+})
 </script>
-
-<style scoped>
-.container {
-  padding: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-h1 {
-  width: 100%;
-  text-align: center;
-  font-size: 100px;
-}
-
-h2{
-  width: 100%;
-  text-align: center;
-}
-</style>
