@@ -3,7 +3,6 @@
     <h1>Expensive Furniture</h1>
     <h2>buy my overpriced products plz</h2> 
 
-    <!-- PRODUCTS -->
     <StoreCard
       v-for="item in items"
       :key="item.name"
@@ -85,3 +84,24 @@ const total = computed(() => {
   return cart.value.reduce((sum, item) => sum + item.price, 0)
 })
 </script>
+
+<style scoped>
+.container {
+  padding: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+}
+
+h2{
+  width: 100%;
+  text-align: center;
+}
+</style>
